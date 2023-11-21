@@ -9,7 +9,7 @@ nrf1s="$?"
 #echo "status is $nrf1s , string is $nrf1"
 if [[ ( -z $nrf1 ) && (( $nrf1s -ne 0 )) ]]
 then
-linenf="\$nrfconf{restart}\ \=\ 'a';"
+linenf="\$nrconf{restart}\ \=\ 'a';"
 linemat="\$nrconf{restart} = 'i'"
 sudo sed -i "/$linemat/a$linenf\n" $filenf
 else
