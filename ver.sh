@@ -90,7 +90,7 @@ else
          echo "The current version $vrchk2 is behind than the requested version $newver "
          echo "Upgrading package"
          #un-comment the following variable when ready to execute the library
-         #$libadd
+         $libadd
  else
 	 echo "No upgrade required"
 	 echo "The current version $vrchk2 is newer than the requested version $newver "
@@ -111,5 +111,5 @@ echo "vrarg3 is ${vrarg3[@]}"
 echo "vrarg4 is ${vrarg4[@]}"
 }
 
-vercheck 1.4.0 "python3 -c \"import zlib;print(zlib.ZLIB_RUNTIME_VERSION)\"" zlibadd
+#vercheck 1.4.0 "python3 -c \"import zlib;print(zlib.ZLIB_RUNTIME_VERSION)\"" zlibadd
 #print_echo
