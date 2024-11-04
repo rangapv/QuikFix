@@ -5,6 +5,10 @@
 #TO-run
 #vercheck new-version-number command-to-execute-to-get-current-version library-call
 
+
+#sourcing the file which holds the update-library call
+source <(curl -s https://raw.githubusercontent.com/rangapv/ansible-install/refs/heads/main/libraries.sh) > /dev/null 2>&1
+
 vercheck() {
 
 vrchk=("$@")
@@ -90,7 +94,7 @@ else
          echo "The current version $vrchk2 is behind than the requested version $newver "
          echo "Upgrading package"
          #un-comment the following variable when ready to execute the library
-         $libadd
+         #$libadd $newver 
  else
 	 echo "No upgrade required"
 	 echo "The current version $vrchk2 is newer than the requested version $newver "
@@ -111,5 +115,5 @@ echo "vrarg3 is ${vrarg3[@]}"
 echo "vrarg4 is ${vrarg4[@]}"
 }
 
-#vercheck 1.4.0 "python3 -c \"import zlib;print(zlib.ZLIB_RUNTIME_VERSION)\"" zlibadd
+vercheck 1.4.0 "python3 -c \"import zlib;print(zlib.ZLIB_RUNTIME_VERSION)\"" zlibadd
 #print_echo
