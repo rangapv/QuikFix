@@ -115,5 +115,5 @@ echo "vrarg3 is ${vrarg3[@]}"
 echo "vrarg4 is ${vrarg4[@]}"
 }
 
-vercheck 1.4.0 "python3 -c \"import zlib;print(zlib.ZLIB_RUNTIME_VERSION)\"" zlibadd
+#vercheck 1.4.0 "python3 -c \"import zlib;print(zlib.ZLIB_RUNTIME_VERSION)\"" zlibadd
 #print_echo
