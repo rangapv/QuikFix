@@ -5,7 +5,6 @@
 #TO-run
 #vercheck new-version-number command-to-execute-to-get-current-version library-call
 
-
 #sourcing the file which holds the update-library call
 source <(curl -s https://raw.githubusercontent.com/rangapv/ansible-install/refs/heads/main/libraries.sh) > /dev/null 2>&1
 
@@ -115,5 +114,6 @@ echo "vrarg3 is ${vrarg3[@]}"
 echo "vrarg4 is ${vrarg4[@]}"
 }
 
-#vercheck 1.4.0 "python3 -c \"import zlib;print(zlib.ZLIB_RUNTIME_VERSION)\"" zlibadd
+#sample-way-to-run
+#vercheck 1.3.1 "python3 -c \"import zlib;print(zlib.ZLIB_RUNTIME_VERSION)\"" zlibadd
 #print_echo
